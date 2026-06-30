@@ -1,0 +1,100 @@
+﻿seed: 42
+
+columns:
+  case_id: case_id
+  method_id: method_id
+  split: split
+  domain: domain
+  target: target_score
+
+features:
+  quantitative:
+    - X1
+    - X2
+    - X3
+    - X4
+    - X5
+    - X6
+    - X7
+  qualitative:
+    - X8
+    - X9
+    - X10
+    - X11
+  simulation:
+    - sigma1_mpa
+    - delta_mm
+    - Ap
+
+feature_order:
+  - X1
+  - X2
+  - X3
+  - X4
+  - X5
+  - X6
+  - X7
+  - X8
+  - X9
+  - X10
+  - X11
+  - sigma1_mpa
+  - delta_mm
+  - Ap
+
+normalization:
+  stress_limit_mpa: 18.19
+  displacement_limit_mm: 40.0
+  plastic_zone_limit: 1.0
+
+model:
+  d_model: 64
+  n_heads: 4
+  d_ff: 128
+  dropout: 0.10
+
+training:
+  epochs: 200
+  patience: 20
+  early_stopping_min_delta: 0.000001
+  batch_size: 8
+  learning_rate: 0.001
+  weight_decay: 0.001
+  inner_validation_fraction: 0.20
+  device: auto
+  num_threads: 1
+
+loss:
+  lambda_physics: 0.10
+  lambda_entropy: 0.05
+  alpha_mc: 0.50
+  alpha_disp: 0.50
+  alpha_plastic: 0.20
+  stress_limit_mpa: 18.19
+  displacement_limit_mm: 40.0
+  plastic_zone_limit: 0.30
+
+augmentation:
+  enabled: false
+  n_aug_per_case: 3
+  quantitative_relative_noise: 0.10
+  qualitative_absolute_noise: 0.05
+  simulation_relative_noise: 0.05
+  clip_qualitative_min: 0.0
+  clip_qualitative_max: 1.0
+  max_stress_ratio_for_keep: 1.00
+  max_displacement_ratio_for_keep: 1.00
+  max_plastic_zone_for_keep: 0.30
+
+outputs:
+  save_attention_matrix: true
+  save_parity_plot: true
+
+hyperparameter_grid:
+  d_model: [32, 64, 128]
+  n_heads: [2, 4, 8]
+  learning_rate: [0.001, 0.0005, 0.0001]
+  lambda_physics: [0.05, 0.10, 0.20]
+  lambda_entropy: [0.01, 0.05, 0.10]
+  dropout: [0.05, 0.10, 0.20]
+  batch_size: [4, 8, 16]

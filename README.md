@@ -123,6 +123,21 @@ The command above intentionally uses a small epoch count so reviewers can verify
 the pipeline quickly. The manuscript configuration in `configs/prt_config.yaml`
 uses 200 maximum epochs with early stopping.
 
+## Optional No-Augmentation Audit
+
+To inspect the effect of training-fold augmentation under the same grouped
+validation protocol, run the no-augmentation configuration:
+
+```bash
+python src/run_experiment.py \
+  --data data/non_confidential_execution_example.csv \
+  --config configs/prt_config_no_augmentation.yaml \
+  --outdir outputs/reviewer_check_no_aug \
+  --epochs 5
+```
+
+Precomputed audit outputs are included in `outputs/reviewer_check_no_aug/`.
+
 ## Model Summary
 
 ```bash

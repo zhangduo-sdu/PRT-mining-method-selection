@@ -1,0 +1,85 @@
+{
+  "config_epochs": 5,
+  "device": "cpu",
+  "external_bootstrap_ci": {
+    "kendall_tau": {
+      "ci95_high": 0.45640577507598784,
+      "ci95_low": 0.1616130114017438,
+      "mean": 0.3014738101862766
+    },
+    "mae": {
+      "ci95_high": 0.04891424414126415,
+      "ci95_low": 0.03582488290744073,
+      "mean": 0.042298034790691004
+    },
+    "n_boot": {
+      "value": 200
+    },
+    "rank_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0
+    },
+    "rmse": {
+      "ci95_high": 0.053908942094708576,
+      "ci95_low": 0.04280968360435961,
+      "mean": 0.04832963141023054
+    },
+    "spearman_rho": {
+      "ci95_high": 0.6558370535714286,
+      "ci95_low": 0.3461996730702133,
+      "mean": 0.4941065458666564
+    }
+  },
+  "external_summary": {
+    "kendall_tau": 0.28735632183908044,
+    "mae": 0.04278084922851751,
+    "n_cases": 10,
+    "n_rows": 30,
+    "rank_accuracy": 1.0,
+    "rmse": 0.048861182588247634,
+    "spearman_rho": 0.4834260289210234
+  },
+  "loocv_bootstrap_ci": {
+    "kendall_tau": {
+      "ci95_high": 0.19200084405629342,
+      "ci95_low": 0.0038010426245140825,
+      "mean": 0.0993126860402161
+    },
+    "mae": {
+      "ci95_high": 0.046845339624147116,
+      "ci95_low": 0.039481221128860634,
+      "mean": 0.04273756933091793
+    },
+    "n_boot": {
+      "value": 200
+    },
+    "rank_accuracy": {
+      "ci95_high": 0.9473684210526315,
+      "ci95_low": 0.5776315789473685,
+      "mean": 0.745
+    },
+    "rmse": {
+      "ci95_high": 0.054172871921124896,
+      "ci95_low": 0.04667353956724856,
+      "mean": 0.05016560471333992
+    },
+    "spearman_rho": {
+      "ci95_high": 0.2842648660609775,
+      "ci95_low": -0.00013135040559098852,
+      "mean": 0.14713833539328572
+    }
+  },
+  "loocv_summary": {
+    "kendall_tau": 0.09147869674185465,
+    "mae": 0.04286486765431332,
+    "n_cases": 19,
+    "n_rows": 57,
+    "rank_accuracy": 0.7368421052631579,
+    "rmse": 0.050238015322951475,
+    "spearman_rho": 0.13585688358828105
+  },
+  "n_external_cases": 10,
+  "n_real_cases": 19,
+  "note": "Non-confidential execution-example results are for code verification only and are not intended to reproduce controlled real-mine results exactly."
+}

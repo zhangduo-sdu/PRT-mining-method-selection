@@ -13,6 +13,7 @@ The repository provides the following items in the current revision.
 - [x] Type-aware Transformer model included.
 - [x] Compound-loss code included.
 - [x] Training-fold-only constrained augmentation included.
+- [x] Optional no-augmentation audit configuration and outputs included.
 - [x] Case-grouped leave-one-case-out validation included.
 - [x] Optional inner-fold grid-search utilities included.
 - [x] External generalization testing included.
