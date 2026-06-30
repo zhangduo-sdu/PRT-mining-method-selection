@@ -156,8 +156,8 @@ def main():
         "external_summary": {k: to_serializable(v) for k, v in external_summary.items()},
         "config_epochs": int(config["training"]["epochs"]),
         "note": (
-            "Synthetic benchmark results are for code verification only and are not "
-            "intended to reproduce confidential real-mine results exactly."
+            "Non-confidential execution-example results are for code verification "
+            "only and are not intended to reproduce controlled real-mine results exactly."
         ),
     }
     if external_summary:

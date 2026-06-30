@@ -81,5 +81,5 @@
   },
   "n_external_cases": 10,
   "n_real_cases": 19,
-  "note": "Synthetic benchmark results are for code verification only and are not intended to reproduce confidential real-mine results exactly."
+  "note": "Non-confidential execution-example results are for code verification only and are not intended to reproduce controlled real-mine results exactly."
 }

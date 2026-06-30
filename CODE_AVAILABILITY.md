@@ -11,14 +11,17 @@ current revision for peer-review reproducibility. The repository includes:
 - case-grouped leave-one-case-out validation;
 - optional inner-fold grid-search utilities for the nested-CV model-selection protocol;
 - external generalization testing;
-- predicted-vs-ground-truth parity plots;
+- predicted-vs-ground-truth agreement plots;
 - attention-matrix export and visualization.
 
-The full real-mine feature matrices, original FLAC3D files, and trained model
-weights derived from confidential industrial data are not included because they
-are subject to data-use agreements. A deterministic synthetic benchmark dataset
-with the same feature schema is included so reviewers can execute the complete
-workflow end to end.
+The complete row-level real-mine feature matrices, original FLAC3D files, and
+trained model weights derived from controlled industrial records are governed by
+third-party data-use agreements and are therefore not included in the public
+repository. A deterministic non-confidential execution example with the same
+feature schema is included so reviewers can execute the complete workflow end to
+end.
 
-The synthetic benchmark is not a substitute for the confidential real-mine data
-and is not intended to reproduce the manuscript's real-data performance values.
+The non-confidential execution example is not a substitute for the controlled
+real-mine data and is not intended to reproduce the manuscript's real-data
+performance values. Validation and generalization claims are based on the real
+cases documented in Supplementary Material S1.

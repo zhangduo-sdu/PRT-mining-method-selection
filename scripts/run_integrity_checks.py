@@ -44,7 +44,7 @@ def main() -> None:
     )
     assert count_parameters(model) == 36993, "Unexpected trainable parameter count."
 
-    df = pd.read_csv(REPO_ROOT / "data" / "synthetic_benchmark.csv")
+    df = pd.read_csv(REPO_ROOT / "data" / "non_confidential_execution_example.csv")
     required = ["case_id", "method_id", "split", "target_score", "is_optimal"] + feature_order
     missing = [col for col in required if col not in df.columns]
     assert not missing, f"Missing required columns: {missing}"

@@ -27,14 +27,14 @@ Commands executed:
    - Trainable parameters: 36,993
    - Allowed attention connections: 140/196
 
-4) End-to-end review check on the included synthetic benchmark
-   python src/run_experiment.py --data data/synthetic_benchmark.csv --config configs/prt_config.yaml --outdir outputs/reviewer_check --epochs 5 --bootstrap-iters 200
+4) End-to-end review check on the included non-confidential execution example
+   python src/run_experiment.py --data data/non_confidential_execution_example.csv --config configs/prt_config.yaml --outdir outputs/reviewer_check --epochs 5 --bootstrap-iters 200
 
-   Synthetic benchmark summary:
+   Non-confidential execution-example summary:
    - real-pool grouped validation: rank_accuracy = 0.842105, MAE = 0.031979
-   - external synthetic cases: rank_accuracy = 1.000000, MAE = 0.041411
+   - external execution-example cases: rank_accuracy = 1.000000, MAE = 0.041411
 
 Important note:
-These synthetic benchmark results verify code executability and workflow
-reproducibility only. They are not intended to reproduce the confidential
-real-mine performance values reported in the manuscript.
+These non-confidential execution-example results verify code executability and
+workflow only. They are not intended to reproduce the controlled real-mine
+performance values reported in the manuscript.

@@ -4,7 +4,7 @@ The repository provides the following items in the current revision.
 
 - [x] Executable Python/PyTorch implementation.
 - [x] No hard-coded local workstation paths.
-- [x] Synthetic benchmark data included.
+- [x] Non-confidential execution example included.
 - [x] Input-data template included.
 - [x] Feature descriptions included.
 - [x] Lightweight repository integrity checks included.
@@ -16,7 +16,7 @@ The repository provides the following items in the current revision.
 - [x] Case-grouped leave-one-case-out validation included.
 - [x] Optional inner-fold grid-search utilities included.
 - [x] External generalization testing included.
-- [x] Predicted-vs-ground-truth parity plot generation included.
+- [x] Predicted-vs-ground-truth agreement plot generation included.
 - [x] Bootstrap confidence-interval output included.
 - [x] Attention-matrix output included.
 - [x] Example review-check outputs included.
@@ -25,7 +25,7 @@ The repository provides the following items in the current revision.
 
 ```bash
 python src/run_experiment.py \
-  --data data/synthetic_benchmark.csv \
+  --data data/non_confidential_execution_example.csv \
   --config configs/prt_config.yaml \
   --outdir outputs/reviewer_check \
   --epochs 5

@@ -9,17 +9,18 @@ peer review. It covers:
 4. physics-regularized attention-mask construction;
 5. PyTorch model training;
 6. grouped validation and external testing;
-7. predicted-vs-ground-truth parity plotting;
+7. predicted-vs-ground-truth agreement plotting;
 8. attention-matrix export;
 9. bootstrap confidence-interval summaries.
 
-The following materials are restricted by industrial confidentiality and data-use
-agreements:
+The following materials are governed by industrial data-use agreements:
 
 - full mine-site indicator matrices;
 - original FLAC3D model files;
-- trained weights obtained from confidential real data.
+- trained weights obtained from controlled real data.
 
-The included synthetic benchmark has the same feature schema as the manuscript
-and is sufficient to verify that the computational pipeline runs end to end. It
-does not replace the confidential real-mine validation data.
+The included non-confidential execution example has the same feature schema as
+the manuscript and is sufficient to verify that the computational pipeline runs
+end to end. It does not replace the controlled real-mine validation data. The
+manuscript validation and generalization claims are based on the real cases
+documented in Supplementary Material S1.

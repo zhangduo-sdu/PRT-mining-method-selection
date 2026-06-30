@@ -101,7 +101,7 @@ def bootstrap_metric_ci(
 
 
 def save_parity_plot(df: pd.DataFrame, out_path: str | Path) -> None:
-    """Save predicted-vs-ground-truth parity plot."""
+    """Save predicted-vs-ground-truth agreement plot."""
     out_path = Path(out_path)
     y = df["target_score"].to_numpy(dtype=float)
     pred = df["pred_score"].to_numpy(dtype=float)

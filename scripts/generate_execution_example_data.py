@@ -1,4 +1,4 @@
-"""Generate a deterministic synthetic benchmark with the manuscript feature schema."""
+"""Generate a deterministic non-confidential execution example with the manuscript feature schema."""
 
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ def normalize_between(x, low, high, beneficial=True):
 
 
 def expert_score(row, rqd, domain):
-    """Generate an expert-consensus-like score for the synthetic benchmark."""
+    """Generate an expert-consensus-like score for the execution example."""
     capacity = normalize_between(row["X1"], 80, 500, True)
     dev = normalize_between(row["X2"], 6, 20, False)
     efficiency = normalize_between(row["X3"], 3, 25, True)
@@ -177,7 +177,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     df = generate(seed=args.seed)
     df.to_csv(out, index=False)
-    print(f"Saved synthetic benchmark to {out} with {len(df)} rows and {df['case_id'].nunique()} cases.")
+    print(f"Saved non-confidential execution example to {out} with {len(df)} rows and {df['case_id'].nunique()} cases.")
 
 
 if __name__ == "__main__":

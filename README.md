@@ -16,22 +16,24 @@ It implements the machine-learning workflow described in the manuscript:
 - case-grouped leave-one-case-out validation;
 - optional inner-fold grid-search utilities for the nested-CV model-selection protocol;
 - external generalization testing;
-- predicted-vs-ground-truth parity plots and attention-matrix export.
+- predicted-vs-ground-truth agreement plots and attention-matrix export.
 
 ## Data Availability Note
 
-The full real-mine feature matrices, original FLAC3D model files, and trained
-weights derived from confidential industrial data are not included because they
-are subject to data-use agreements. This repository therefore includes:
+The complete row-level real-mine feature matrices, original FLAC3D model files,
+and trained weights derived from controlled industrial records are governed by
+third-party data-use agreements and are therefore not included in the public
+repository. This repository therefore includes:
 
 - the full executable PyTorch implementation;
-- a deterministic synthetic benchmark dataset with the same column schema as the manuscript;
+- a deterministic non-confidential execution example with the same column schema as the manuscript;
 - an input template for running the same code on real case data;
-- review-check outputs generated from the synthetic benchmark.
+- review-check outputs generated from the non-confidential execution example.
 
-The synthetic benchmark is for code-executability and workflow-reproducibility
-checking only. It is not intended to reproduce the confidential real-mine
-performance values reported in the manuscript.
+The non-confidential execution example is for code-executability and workflow
+checking only. It is not used for the real-case validation, external
+generalization, or domain-boundary claims reported in the manuscript. Those
+claims are based on the real cases documented in Supplementary Material S1.
 
 ## Repository Structure
 
@@ -46,13 +48,13 @@ PRT_mining_method_selection_code/
 |-- configs/
 |   `-- prt_config.yaml
 |-- data/
-|   |-- synthetic_benchmark.csv
+|   |-- non_confidential_execution_example.csv
 |   |-- feature_description.csv
 |   `-- example_real_case_format.csv
 |-- docs/
 |   `-- reproducibility_notes.md
 |-- scripts/
-|   |-- generate_synthetic_data.py
+|   |-- generate_execution_example_data.py
 |   |-- run_integrity_checks.py
 |   |-- run_review_check.sh
 |   |-- run_review_check.ps1
@@ -94,12 +96,12 @@ conda activate prt-mining
 
 ## Quick Review Check
 
-Run the complete grouped-validation pipeline on the included synthetic
-benchmark:
+Run the complete grouped-validation pipeline on the included non-confidential
+execution example:
 
 ```bash
 python src/run_experiment.py \
-  --data data/synthetic_benchmark.csv \
+  --data data/non_confidential_execution_example.csv \
   --config configs/prt_config.yaml \
   --outdir outputs/reviewer_check \
   --epochs 5
@@ -153,7 +155,7 @@ subset of candidate configurations:
 
 ```bash
 python src/run_grid_search.py \
-  --data data/synthetic_benchmark.csv \
+  --data data/non_confidential_execution_example.csv \
   --config configs/prt_config.yaml \
   --outdir outputs/grid_search_demo \
   --epochs 3 \
@@ -163,11 +165,11 @@ python src/run_grid_search.py \
 Running the full grid is computationally heavier and is not required for the
 quick review check.
 
-## Regenerate the Synthetic Benchmark
+## Regenerate the Non-confidential Execution Example
 
 ```bash
-python scripts/generate_synthetic_data.py \
-  --out data/synthetic_benchmark.csv \
+python scripts/generate_execution_example_data.py \
+  --out data/non_confidential_execution_example.csv \
   --seed 42
 ```
 
@@ -201,8 +203,10 @@ for peer review in the current revision. The repository includes preprocessing,
 physics-regularized attention-mask construction, model definition, compound-loss
 calculation, training-fold-only augmentation, case-grouped validation,
 external-generalization testing, predicted-vs-ground-truth plotting, and
-attention-matrix export. Confidential real-mine feature matrices, original
-FLAC3D files, and trained weights are restricted by data-use agreements; a
-synthetic benchmark with the same feature schema is included to verify that the
-complete computational workflow is executable.
+attention-matrix export. Complete row-level real-mine feature matrices, original
+FLAC3D files, and trained weights derived from controlled industrial records are
+governed by data-use agreements; a non-confidential execution example with the
+same feature schema is included to verify that the complete computational
+workflow is executable. The validation and generalization claims are based on
+the real cases documented in Supplementary Material S1.
 ```
