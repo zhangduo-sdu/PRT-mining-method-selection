@@ -1,0 +1,85 @@
+{
+  "config_epochs": 5,
+  "device": "cpu",
+  "external_bootstrap_ci": {
+    "kendall_tau": {
+      "ci95_high": 0.5012312538029277,
+      "ci95_low": 0.18400554844216815,
+      "mean": 0.32320874075088213
+    },
+    "mae": {
+      "ci95_high": 0.04695611480058012,
+      "ci95_low": 0.03496444317998837,
+      "mean": 0.040944920624497755
+    },
+    "n_boot": {
+      "value": 200
+    },
+    "rank_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0
+    },
+    "rmse": {
+      "ci95_high": 0.05171790517955669,
+      "ci95_low": 0.040649719157402175,
+      "mean": 0.046462761997468766
+    },
+    "spearman_rho": {
+      "ci95_high": 0.694949318724638,
+      "ci95_low": 0.4074888392857143,
+      "mean": 0.5305335112789499
+    }
+  },
+  "external_summary": {
+    "kendall_tau": 0.3103448275862069,
+    "mae": 0.04141144284648075,
+    "n_cases": 10,
+    "n_rows": 30,
+    "rank_accuracy": 1.0,
+    "rmse": 0.04690145302985014,
+    "spearman_rho": 0.5239154616240267
+  },
+  "loocv_bootstrap_ci": {
+    "kendall_tau": {
+      "ci95_high": 0.4645978120978122,
+      "ci95_low": 0.26757310493012176,
+      "mean": 0.3722595082397342
+    },
+    "mae": {
+      "ci95_high": 0.036239721050898226,
+      "ci95_low": 0.02733079739403175,
+      "mean": 0.031668367678416715
+    },
+    "n_boot": {
+      "value": 200
+    },
+    "rank_accuracy": {
+      "ci95_high": 1.0,
+      "ci95_low": 0.6828947368421053,
+      "mean": 0.8505263157894737
+    },
+    "rmse": {
+      "ci95_high": 0.04370905747262924,
+      "ci95_low": 0.03312860253447446,
+      "mean": 0.038624048655398334
+    },
+    "spearman_rho": {
+      "ci95_high": 0.6508866505697818,
+      "ci95_low": 0.4208859688980042,
+      "mean": 0.5560173984343477
+    }
+  },
+  "loocv_summary": {
+    "kendall_tau": 0.3634085213032582,
+    "mae": 0.031978804973523976,
+    "n_cases": 19,
+    "n_rows": 57,
+    "rank_accuracy": 0.8421052631578947,
+    "rmse": 0.03900651988398252,
+    "spearman_rho": 0.5538631060409644
+  },
+  "n_external_cases": 10,
+  "n_real_cases": 19,
+  "note": "Synthetic benchmark results are for code verification only and are not intended to reproduce confidential real-mine results exactly."
+}

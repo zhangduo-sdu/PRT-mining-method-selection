@@ -1,0 +1,22 @@
+column,description
+case_id,Independent mine-case identifier
+method_id,Candidate mining method identifier
+split,real_pool or external_generalization
+domain,"in_distribution, boundary, or out_of_distribution"
+RQD,Rock-quality designation (%)
+X1,"Stope production capacity (t/d), quantitative"
+X2,"Development ratio (m/kt), quantitative; lower is better"
+X3,"Labor efficiency (t/person/shift), quantitative"
+X4,"Explosive consumption (kg/t), quantitative; lower is better"
+X5,"Ore loss rate (%), quantitative; lower is better"
+X6,"Ore dilution rate (%), quantitative; lower is better"
+X7,"Mining plus backfill cost (CNY/t), quantitative; lower is better"
+X8,"Safety index (0-1), qualitative/semi-quantitative; higher is better"
+X9,Workflow simplicity/complexity score (0-1); higher is simpler
+X10,Mechanization degree (0-1)
+X11,Cycle continuity/time score (0-1); higher is better
+sigma1_mpa,Maximum principal stress from FLAC3D (MPa)
+delta_mm,Maximum roof displacement from FLAC3D (mm)
+Ap,Normalized plastic-zone area
+target_score,"Ground-truth/expert-consensus superiority score in [0, 1]"
+is_optimal,"1 for highest target_score in each case, otherwise 0"
